@@ -9,11 +9,12 @@ import { FirebaseAuthProvider,FirebaseAuthConsumer } from "@react-firebase/auth"
 //     // IfFirebaseAuthedAnd
 //   } from "@react-firebase/auth";
 
-export default function FirebaseTeste(){
+function FirebaseTeste(props){
+    const config = props.config;
 
     return (
-        <div>
-          
+  
+        <FirebaseAuthProvider firebase={firebase} {...config}>
             <button
                 onClick={() => {
                     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
@@ -39,7 +40,29 @@ export default function FirebaseTeste(){
                         );
                     }}
                 </FirebaseAuthConsumer>
-            </div>       
-        </div>
+            </div> 
+            </FirebaseAuthProvider>   
+
+       
     );
 }
+export async function getStaticProps()
+{
+    const config = {
+        apiKey: process.env.FIREBASE_API_KEY,
+        projectId: process.env.FIREBASE_PROJECT_ID,
+        databaseURL: process.env.FIREBASE_DATABASE_URL,
+        authDomain: process.env.FIREBASE_AUTH_DOMAIN, 
+        storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
+     };
+    console.log('[FIREBASE] Passando pelo getStaticProps();');
+
+    return {
+        props: {
+            config
+        }
+    }
+}
+
+export default FirebaseTeste;
