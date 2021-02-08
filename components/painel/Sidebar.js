@@ -4,8 +4,7 @@ import CreditCardIcon from '@material-ui/icons/CreditCard';
 
 export default function Sidebar(){
     return (
-        <div className ={style.estilo}>
-            <h2>Organizei.me</h2>
+        <div className ={style.estilo}>            
             <div>
                 <div className ={style.icone}><CreditCardIcon /></div>                
                 <p>Orçamentos</p>

@@ -1,7 +1,9 @@
 .estilo {
     background-color: #ffffff;
-    width: 300px;
+    width: 320px;
     height: 100vh;
+    z-index: 10;
+    transform: translate(0px, 0px);
 }
 .estilo h2{
     /* background-color: darkkhaki; */
@@ -38,6 +40,31 @@
     flex-direction: row;
     padding: 15px;
     font-size: 20px;
+}
+.menuVisivel{
+    background-color: #ffffff;
+    width: 320px;
+    height: 100vh;
+    transform: translate(0, 0px);
+}
+.menuInisivel{
+    background-color: #ffffff;
+    width: 320px;
+    height: 100vh;
+    transform: translate(-320px, 0px);
+}
+
+@media (max-width: 320px){
+    /* .estilo{
+        background-color: darkkhaki;
+        height: 3em;
+    }
+    .estilo h2{
+        display: none;       
+    }
+    .estilo > div{
+        display: none;       
+    } */
 }
 /* 
 .estilo descricao{
