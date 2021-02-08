@@ -1,6 +1,6 @@
 import Sidebar from '../../components/painel/Sidebar';
 import { useState } from 'react';
-import style from '../../styles/Dashboard.module.css';
+import style from '../../styles/dashboard.module.css';
 
 export default function Dashboard(){
     const [menuSidebar, setmenuSidebar] = useState(false);
