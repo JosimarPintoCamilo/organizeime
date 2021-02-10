@@ -2,7 +2,10 @@
     display: flex;
     background-color: white;
     height: 64px;
+    width: 100vw;
     padding: 8px;
+    align-items: center;
+    justify-content: space-between;
 }
 .menuSuperior > div {
     display: flex;
@@ -19,4 +22,41 @@
 .iconeSidebar:hover{
     cursor: pointer;
     background-color: #e8ebf4;
-}    
+}   
+.iconeConfiguracoes{
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    margin-right: 4px;
+    border-radius: 24px;
+}
+.iconeConfiguracoes:hover{
+    cursor: pointer;
+    background-color: #e8ebf4;
+}   
+.iconePerfil{
+    width: 48px;
+    height: 48px;
+    position: relative;
+    padding: auto;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 24px;
+}
+.iconePerfil > img{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-top: 4px;
+    border-radius: 20px;
+}
+.iconePerfil:hover{
+    cursor: pointer;
+    background-color: #e8ebf4; 
+}
+
+@media (max-width: 320px){
+    .logo{
+        font-size: medium;
+    }
+}
